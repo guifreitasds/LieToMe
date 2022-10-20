@@ -3,9 +3,31 @@
     padding: 0;
 }
 
-header{
-    background: linear-gradient(45deg, rgb(253, 67, 67), rgb(103, 246, 101));
+header{ 
+    background-color: azure;
     text-align: center;
-    font: 2em Arial, sans-serif;
-    color: royalblue
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+header > h1{
+    font-size: 3em; 
+    margin-bottom: 5px;
+}
+
+header > h2{
+    font: 1.2em Arial, sans-serif;
+}
+
+.redspan{
+    color: red;
+}
+
+.greenspan{
+    color: green
+}
+
+main{
+    background-color: aquamarine;
+    padding: 40px;
 }
