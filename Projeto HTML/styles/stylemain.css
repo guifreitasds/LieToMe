@@ -1,46 +1,342 @@
+/* =========== PADRONIZAÇÃO ===========*/
+@charset "UTF-8";
+
+:root {
+    --primary-white: #FFFFFF;
+    --secundary-white: #F0F2F5;
+    --primary-gray: #606266;
+    --secundary-gray: #a1a1a1;
+    --primary-blue: #1B74E4;
+    --secundary-blue: #1d94e4;
+    --tertiary-blue: #0e1838;
+    --primary-red: #E73F5A;
+    --secundary-red: #e9747e;
+    --tertiary-red: #f0dee0;
+    --primary-green: #41B35D;
+    --secundary-green: #49c27b;
+    --tertiary-green: #c7e0d1;
+    --gap: 30px;
+}
+
+.blue1 {
+    color: var(--primary-blue);
+}
+
+.blue2 {
+    color: var(--secundary-blue);
+}
+
+.blue3 {
+    color: var(--tertiary-blue);
+}
+
+.grey {
+    color: var(--primary-gray);
+}
+
+.red {
+    color: var(--primary-red);
+}
+
+.green {
+    color: var(--primary-green);
+}
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header{ 
-    background-color: azure;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
+html {
+    scroll-behavior: smooth;
 }
 
-header > h1{
-    font-size: 3em; 
-    margin-bottom: 5px;
+a {
+    text-decoration: none;
 }
 
-header > h2{
-    font: 1.2em Arial, sans-serif;
+li {
+    list-style: none;
 }
 
-.redspan{
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#heart {
     color: red;
 }
 
-.greenspan{
-    color: green
+/* =========== PADRONIZAÇÃO ===========*/
+/* =========== HEADER ===========*/
+
+header{ 
+    background-color: var(--primary-white);
+    width: 100%;
+    height: 55px;
 }
+
+.menu {
+    background-color: var(--primary-white);
+    padding: 0 5px 0 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 0px 0.1px 5px 0.1px rgba(0, 0, 0, 0.30);
+    z-index: 2;
+}
+
+.menu-content {
+    max-width: 100%;
+    padding: 0px 5px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-header {
+    height: 40px;
+    width: 40px;
+}
+
+.options {
+    display: flex;
+}
+
+.options div {
+    display: block;
+    position: relative;
+    padding: 5px;
+}
+
+.options ul {
+    display: flex;
+}
+
+.options ul li a {
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    color: var(--primary-gray);
+    position: relative;
+}
+
+.options0 {
+    display: flex;
+}
+
+.options0 ul {
+    display: flex;
+}
+
+.options0 ul li a {
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.top {
+    display: block;
+    padding-top: 15px;
+    font-size: 18px;
+    color: var(--primary-gray);
+    position: relative;
+}
+
+.options ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 0;
+    height: 2.5px;
+    border-radius: 3px;
+    background: var(--primary-blue);
+    transition: all 300ms ease-in-out;
+}
+
+.options ul li a:hover::after {
+    width: 100%;
+    left: 0%;
+}
+
+.options ul li a:hover {
+    background: var(--secundary-white);
+    transition: all 50ms ease-in;
+}
+
+.hovg:hover {
+    color: var(--secundary-green);
+    transition: all 50ms ease-in;
+}
+
+.hovr:hover {
+    color: var(--secundary-red);
+    transition: all 50ms ease-in;
+}
+
+.hovr::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--secundary-red);
+    transition: all 750ms ease-in-out;
+}
+
+.hovr:hover::after {
+    width: 100%;
+    left: 0%;
+}
+
+.hovg::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--secundary-green);
+    transition: all 750ms ease-in-out;
+}
+
+.hovg:hover::after {
+    width: 100%;
+    left: 0%;
+}
+
+.searchCamp input {
+    border: none;
+    border-radius: 20px;
+    background: var(--secundary-white);
+    padding: 5px 25px;
+    width: 100%;
+    height: 80%;
+    font-size: 15px;
+}
+
+.searchCamp {
+    position: relative;
+    top: 5px;
+}
+
+.searchCamp input#searchInp {
+    background-image: url("../../src/img/loupe-header.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 15px;
+    text-indent: 15px;
+}
+
+.searchCamp input:focus {
+    outline: none;
+}
+
+.fof {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =========== HEADER ===========*/
+/* =========== MAIN ===========*/
 
 main{
-    background-color: wheat;
-    padding: 40px;
+    background: var(--secundary-white);
 }
 
+section {
+    height: 100vh;
+    padding: 60px 15px;
+}
 
-div.searchCamp{
+section .initial {
+    background: var(--secundary-white);
+}
+
+.fato {
+    background: var(--tertiary-green);
+}
+
+.fake {
+    background: var(--tertiary-red);
+}
+
+/* =========== MAIN ===========*/
+/* =========== FOOTER ===========*/
+
+footer a {
+    color: rgb(255, 73, 134);
+}
+
+footer {
     text-align: center;
+    padding: 20px;
+    color: var(--primary-blue);
 }
 
-main > div > label{
-    display: block;
-    font: 1.5em Arial, sans-serif;
+footer p {
+    font-family: 'Montserrat', sans-serif;
 }
 
-div.searchInp{
+/* =========== FOOTER ===========*/
+/* =========== MEDIA RESPOSIVE ===========*/
+
+
+/* =========== MEDIA RESPOSIVE ===========*/
+/* =========== OTHER'S ===========*/
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-blue);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-white);
+    border: 1px solid #c4c4c4c4;
+    opacity: 0.3;
+    pointer-events: painted;
+    cursor: pointer;
+    transition: all 600ms ease-in-out;
+    z-index: 1;
 }
+
+.back-to-top:after {
+    position: absolute;
+    content: "";
+    width: calc(50px / 4);
+    height: calc(50px / 4);
+    border-width: 5px;
+    border-style: solid;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    top: 18px;
+    transform: rotate(135deg);
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+/* =========== OTHER'S ===========*/

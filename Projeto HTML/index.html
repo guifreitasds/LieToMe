@@ -4,23 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lie To Me - Fato Ou Fake</title>
+    <title>Lie to Me - Fato Ou Fake</title>
     <link rel="stylesheet" href="styles/stylemain.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../src/img/false-logo-icon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Lie To Me</h1>
-        <h2>Descubra se qualquer notícia é <span class="greenspan">verdadeira</span> ou <span class="redspan">falsa</span>!</h2>
+        <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+        <label class="close-menu-label" for="close-menu" title="close menu"></label>
+        <div class="menu">
+            <aside class="menu-content">
+                <div class="options">
+                    <div class="logo">
+                        <span onclick="getElementById('close-menu').checked = false;"><a href="index.html"><img class="img-header" src="../src/img/false-logo-icon.png" alt=""></a></span>
+                    </div>
+                    <div class="searchCamp">
+                        <label for="message"></label>
+                        <input type="text" name="searchInp" id="searchInp" onchange="hideIcon(this);" placeholder="Pesquisar no Lie to Me">
+                    </div>
+                </div>
+                <div class="options0 fof">
+                    <ul>
+                        <li><a class="green hovg" href="#fato">FATO</a></li>
+                        <li class="grey top">OU</li>
+                        <li><a class="red hovr" href="#fake">FAKE</a></li>
+                    </ul>
+                </div>
+                <nav class="options">
+                    <ul onclick="getElementById('close-menu').checked = false;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="noticias.html">Nóticias</a></li>
+                        <li><a href="preferidos.html">Preferidos</a></li>
+                        <li><a href="config.html">Configurações</a></li>
+                    </ul>
+                </nav>
+                <div class="options">
+                    <ul>
+                        <li><a href="perfil.html">Perfil</a></li>
+                    </ul>
+                    <div><a href="perfil.html"><img class="img-header" src="../src/img/user-header.png" alt="User"></a></div>
+                </div>
+            </aside>
+        </div>
     </header>
     <main>
-        <div class="searchCamp">
-            <label for="">Pesquise a notícia desejada para checagem ou filtre!</label>
-            <input type="text" name="searchInp" id="searchInp">
-        </div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt nemo voluptatum fugit voluptate itaque illum nisi aut at vitae, ut laboriosam similique ad nihil, iusto sit ab exercitationem corrupti culpa.</p>
+        <section id="initial" class="initial">
+            <h1 class="blue1">Este é o Lie to Me!</h1>
+            <p class="blue3">Descubra se qualquer notícia é <span><a class="green" href="#fato">verdadeira</a></span> ou <span><a class="red" href="#fake">falsa</a></span>!</p>
+        </section>
+        <section id="fato" class="fato">
+            <p>Nóticias Verdadeiras</p>
+        </section>
+        <section id="fake" class="fake">
+            <p>Nóticias Falsas</p>
+        </section>
     </main>
     <footer>
-
+        <div>
+            <p>Feito com <span id="heart">❤️</span> pela equipe do <a rel="nofollow" target="_blank" href="">Portinho</a></p>
+        </div>
     </footer>
+    <a class="back-to-top" role="button" aria-label="Back to top" title="Back to top" href="#initial"></a>
 </body>
 </html>
