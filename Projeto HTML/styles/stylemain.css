@@ -28,14 +28,19 @@ header > h2{
 }
 
 main{
-    background-color: aquamarine;
+    background-color: wheat;
     padding: 40px;
+}
+
+
+div.searchCamp{
+    text-align: center;
 }
 
 main > div > label{
     display: block;
+    font: 1.5em Arial, sans-serif;
 }
 
-div.searchCamp{
-    text-align: center;
+div.searchInp{
 }
