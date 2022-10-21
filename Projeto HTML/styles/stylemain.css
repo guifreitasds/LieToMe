@@ -1,6 +1,8 @@
 /* =========== PADRONIZAÇÃO ===========*/
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
 :root {
     --primary-white: #FFFFFF;
     --secundary-white: #F0F2F5;
@@ -10,11 +12,12 @@
     --secundary-blue: #1d94e4;
     --tertiary-blue: #0e1838;
     --primary-red: #E73F5A;
-    --secundary-red: #e9747e;
+    --secundary-red: #e47c85;
     --tertiary-red: #f0dee0;
     --primary-green: #41B35D;
-    --secundary-green: #49c27b;
+    --secundary-green: #5acf8b;
     --tertiary-green: #c7e0d1;
+    --primary-gold: #E6F805;
     --gap: 30px;
 }
 
@@ -262,6 +265,7 @@ header{
 
 #banner {
     width: 800px;
+    margin: auto;
 }
 
 main{
@@ -277,12 +281,20 @@ section .initial {
     background: var(--secundary-white);
 }
 
-section.fato > p{
+.initial div {
+    text-align: center;
+}
+
+section.fato > h2{
+    max-width: 1200px;
+    text-align: center;
     font-size: 2em;
     font-weight: 700;
 }
 
-section.fake > p{
+section.fake > h2{
+    max-width: 1200px;
+    text-align: center;
     font-size: 2em;
     font-weight: 700;
 }
@@ -292,27 +304,138 @@ section.fake > p{
     transition: background-color 500ms ease-out;
 }
 
-.fato:hover{
-    background: var(--secundary-green);
-}
-
 .fake {
     background: var(--tertiary-red);
     transition: background-color 500ms ease-out;
 }
 
-.fake:hover{
+.fato:hover {
+    background: var(--secundary-green);
+}
+
+.fake:hover {
     background-color: var(--secundary-red);
+}
+
+.main-content {
+    max-width: 1200px;
+    padding: 0 10px 0 10px;
+    margin: 0 auto;
+}
+
+.gallery-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.gallery-img-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.p-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    padding-bottom: 20px;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 320px;
+    max-height: 168px;
+    overflow: hidden;
+}
+
+.p-c {
+    padding: 2px 4px;
+    border-radius: 8px;
+    color: var(--primary-gray);
+    width: 100%;
+    max-width: 320px;
+    max-height: 75px;
+    overflow: hidden;
+}
+
+.p-cg {
+    background: var(--tertiary-green);
+}
+
+.p-cr {
+    background: var(--tertiary-red);
+}
+
+.p-c p {
+    font-family: 'mark', arial, georgia, sans-serif;
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+    z-index: 0;
+}
+
+.gallery-img img:hover {
+    transform: translate(-2%, 2%) scale(1.2) rotate(3deg);
+    z-index: 0;
 }
 
 /* =========== MAIN ===========*/
 /* =========== FOOTER ===========*/
 
-footer a {
-    color: rgb(255, 73, 134);
+.foot-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.f-c {
+    padding: 2px 4px;
+    border-radius: 8px;
+    color: var(--primary-gray);
+    width: 100%;
+    max-width: 320px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.f-c h3 {
+    padding-bottom: 40px;
+    color: var(--primary-gold);
+}
+
+.f-c p a, .f-c p {
+    color: var(--primary-white);
+    font-size: 20px;
+    font-family: 'mark', arial, georgia, sans-serif;
+    padding-bottom: 20px;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.nlink {
+    text-decoration: none;
+}
+
+.nlink:hover {
+    text-decoration: underline;
+}
+
+.f-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    padding-bottom: 20px;
 }
 
 footer {
+    background: black;
+    height: 95vh;
     text-align: center;
     padding: 20px;
     color: var(--primary-blue);
@@ -320,6 +443,33 @@ footer {
 
 footer p {
     font-family: 'Montserrat', sans-serif;
+}
+
+.linksr {
+    color: #f9f9f9;
+    display: inline-block;
+    padding: 0px 25px 0px 25px;
+    text-decoration: none;
+}
+
+.linksr:hover {
+    color: var(--primary-white);
+    background-color: #444444;
+    padding: 10px 25px 10px 25px;
+    transition: all .2s linear;
+    border-radius: 10px;
+    
+}
+
+footer div.links {
+    margin-top: 135px;
+    font-family: din, arial, georgia, sans-serif;
+    background: #292929;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
 }
 
 /* =========== FOOTER ===========*/
