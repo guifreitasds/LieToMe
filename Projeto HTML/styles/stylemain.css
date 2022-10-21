@@ -279,6 +279,12 @@ header{
     margin: 5px;
     border: 0.1px solid var(--secundary-blue);
     border-radius: 25px;
+    transition: all 100ms ease;
+}
+
+.categorias span:hover{
+    color: var(--primary-white);
+    background-color: var(--primary-blue);
 }
 
 .categorias {
@@ -331,14 +337,13 @@ section .initial {
 }
 
 section.fato > h2{
-    max-width: 1200px;
     text-align: center;
     font-size: 2em;
     font-weight: 700;
+    width: 100%;
 }
 
 section.fake > h2{
-    max-width: 1200px;
     text-align: center;
     font-size: 2em;
     font-weight: 700;
