@@ -270,6 +270,16 @@ section .initial {
     background: var(--secundary-white);
 }
 
+section.fato > p{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+section.fake > p{
+    font-size: 2em;
+    font-weight: 700;
+}
+
 .fato {
     background: var(--tertiary-green);
 }
