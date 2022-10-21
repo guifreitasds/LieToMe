@@ -52,7 +52,7 @@ html {
     scroll-behavior: smooth;
 }
 
-a {
+li a, span a, a {
     text-decoration: none;
 }
 
@@ -101,6 +101,7 @@ header{
 
 .menu-content {
     max-width: 100%;
+    height: 55px;
     padding: 0px 5px;
     margin: 0 auto;
     display: flex;
@@ -115,6 +116,7 @@ header{
 
 .options {
     display: flex;
+    padding-top: 15px;
 }
 
 .options div {
@@ -137,6 +139,7 @@ header{
 
 .options0 {
     display: flex;
+    padding-top: 15px;
 }
 
 .options0 ul {
@@ -227,7 +230,7 @@ header{
     border: none;
     border-radius: 20px;
     background: var(--secundary-white);
-    padding: 5px 25px;
+    padding: 0px 25px;
     width: 100%;
     height: 80%;
     font-size: 15px;
@@ -235,7 +238,7 @@ header{
 
 .searchCamp {
     position: relative;
-    top: 5px;
+    top: -25px;
 }
 
 .searchCamp input#searchInp {
@@ -256,6 +259,10 @@ header{
 
 /* =========== HEADER ===========*/
 /* =========== MAIN ===========*/
+
+#banner {
+    width: 800px;
+}
 
 main{
     background: var(--secundary-white);
@@ -282,21 +289,20 @@ section.fake > p{
 
 .fato {
     background: var(--tertiary-green);
+    transition: background-color 500ms ease-out;
 }
 
 .fato:hover{
-    color: var(--primary-white);
-    background-color: var(--secundary-green);
-    transition: all 300ms ease-in-out;
+    background: var(--secundary-green);
 }
 
 .fake {
     background: var(--tertiary-red);
+    transition: background-color 500ms ease-out;
 }
 
 .fake:hover{
-    background-color: var(--primary-red);
-    transition: all 300ms ease-out;
+    background-color: var(--secundary-red);
 }
 
 /* =========== MAIN ===========*/
@@ -346,8 +352,8 @@ footer p {
 .back-to-top:after {
     position: absolute;
     content: "";
-    width: calc(50px / 4);
-    height: calc(50px / 4);
+    width: calc(100px / 4);
+    height: calc(100px / 4);
     border-width: 5px;
     border-style: solid;
     border-top-color: transparent;
@@ -358,6 +364,7 @@ footer p {
 
 .back-to-top:hover {
     opacity: 1;
+    color: var(--primary-white);
 }
 
 /* =========== OTHER'S ===========*/
