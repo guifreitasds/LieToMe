@@ -1,7 +1,7 @@
 <?php
   class Connection
   {
-    private $SERVER = "localhost";
+    private $SERVER = "mysql835.umbler.com";
     private $DB_NAME = "meu_banco";
     private $USER = "marcos";
     private $PASS = "senha123";

@@ -7,7 +7,17 @@ if(isset($_POST['name']) && isset($_POST['pass']))
 {
     $name = $_POST['name'];
     $pass = $_POST['pass'];
-    $con->getInstance()->query("INSERT INTO usuarios(name,password) VALUES ('$name','$pass')");
+
+    $query = $con->getInstance()->query("SELECT * FROM usuarios WHERE name='$name' and password='$pass';");
+    $result = $query->fetchAll();
+
+    if(count($result))
+    {
+      echo "Este e-mail já está cadastrado. <a href='login.php'>Clique aqui</a> para realizar o login.";
+    } else {
+      $con->getInstance()->query("INSERT INTO usuarios (name,password) VALUES ('$name','$pass');");
+      header('Location: login.php');
+    }
 }
 
 ?>

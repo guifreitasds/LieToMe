@@ -13,14 +13,9 @@ if(isset($_POST['name']) && isset($_POST['pass']))
 
     if(count($result))
     {
-      header('Location: ./news.html'); 
+      header('Location: ../news.html'); 
     } else {
-      echo "
-      <script>
-        const article = document.getElementById('erroMessage');
-        article.innerText = `<span class='msmerr'>Usuário ou senha incorretos!</span>`;
-      </script>
-      ";
+        header('Location: register.php');
     }
 }
 
