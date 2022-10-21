@@ -520,6 +520,147 @@ footer div.links {
 /* =========== FOOTER ===========*/
 /* =========== MEDIA RESPOSIVE ===========*/
 
+.close-menu {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    #banner {
+        width: 500px;
+        margin: auto;
+    }
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+        display: none;
+    }
+
+    .menu-content, .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 3;
+        top: 20px;
+        right: 20px;
+        background: var(--primary-blue);
+        color: var(--primary-white);
+        font-size: 20px;
+        line-height: 20px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 3px 3px 3px 3px;
+        border: 1px solid rgba(212, 212, 212, 0.26);
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    header {
+        height: 0;
+    }
+
+    .media {
+        height: 260px;
+    }
+
+    .gallery-img {
+        max-width: 240px;
+        max-height: 147px;
+    }
+
+    footer div.links {
+        margin-top: 10px;
+    }
+
+    footer div {
+        margin: 0 auto;
+    }
+    footer {
+        height: 110vh;
+    }
+
+    footer div.links a {
+        padding: 30px 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    #banner {
+        padding-top: 50px;
+        width: 350px;
+        margin: auto;
+    }
+
+    .media {
+        height: 183px;
+    }
+
+    .gallery-img {
+        max-width: 0px;
+        max-height: 0px;
+    }
+
+    footer div.links {
+        margin-top: 0px;
+    }
+    
+    .gallery-img-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .p-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section.fato, section.fake {
+        height: 110vh;
+    }
+
+    footer {
+        height: 190vh;
+    }
+
+    .f-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer div.links {
+        flex-direction: column;
+        padding: 100px 0px;
+    }
+
+    footer div.links a {
+        padding: 20px 0px;
+    }
+
+    section.temas {
+        height: 170vh;
+    }
+
+    .verificados {
+        flex-wrap: wrap;
+    }
+
+    .verificados div {
+        margin: 10px 10px;
+    }
+}
 
 /* =========== MEDIA RESPOSIVE ===========*/
 /* =========== OTHER'S ===========*/

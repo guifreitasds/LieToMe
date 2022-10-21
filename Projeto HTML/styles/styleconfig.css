@@ -54,3 +54,17 @@ h1.blue1, p.blue3{
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
 }
+
+@media (max-width: 500px) {
+    .configsec {
+        height: 200vh;
+    }
+
+    .configmain {
+        display: block;
+    }
+
+    .config {
+        width: 100%;
+    }
+}
